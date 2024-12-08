@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Mes Kitchen</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('/pictures/download.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+        .profile-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #ff7043;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+        }
+        .profile-button:hover {
+            background: #ff5722;
+        }
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .button {
+            background: #ff7043;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .button:hover {
+            background: #ff5722;
+        }
+    </style>
+</head>
+<body>
+    <a href="profile.html" class="profile-button">Profile</a>
+    <div class="container">
+        <h1>Our Menu</h1>
+        <div class="button-container">
+            <a href="breakfast.html" class="button">Breakfast</a>
+            <a href="lunch.html" class="button">Lunch</a>
+            <a href="supper.html" class="button">Supper</a>
+            <a href="sides.html" class="button">Sides</a>
+            <a href="drinks.html" class="button">Drinks</a>
+        </div>
+    </div>
+</body>
+</html>

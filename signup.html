@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Kitchen</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('/pictures/download.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #ddd;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .button {
+            background: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .button:hover {
+            background: #218838;
+        }
+        .student-info {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleStudentInfo() {
+            const role = document.getElementById('role').value;
+            const studentInfo = document.getElementById('student-info');
+            if (role === 'Student') {
+                studentInfo.style.display = 'block';
+            } else {
+                studentInfo.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Mes Kitchen</h1>
+        <h1>Sign up</h1>
+        <form>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="department">Department</label>
+            <select id="department" name="department" required>
+                <option value="" disabled selected>Select your department</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Informatics">Informatics</option>
+                <option value="Business">Business</option>
+                <option value="Communications Art">Communications Art</option>
+            </select>
+
+            <label for="role">Role</label>
+            <select id="role" name="role" onchange="toggleStudentInfo()" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="Student">Student</option>
+                <option value="Staff">Staff</option>
+            </select>
+
+            <div id="student-info" class="student-info">
+                <label for="indexnumber">Index Number</label>
+                <input type="text" id="indexnumber" name="indexnumber">
+            </div>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmpassword">Confirm Password</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" required>
+
+            <a href="login.html" class="button">Register</a>
+        </form>
+    </div>
+</body>
+</html>

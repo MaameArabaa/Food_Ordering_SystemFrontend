@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allergies & Dietary Restrictions - Mes Kitchen</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('/pictures/download.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .button {
+            width: 100%;
+            background-color: #ff7043;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Allergies & Dietary Restrictions</h1>
+        <form id="allergies-form">
+            <label for="allergies">Allergies</label>
+            <input type="text" id="allergies" name="allergies" placeholder="Enter your allergies">
+
+            <label for="dietary-restrictions">Dietary Restrictions</label>
+            <input type="text" id="dietary-restrictions" name="dietary-restrictions" placeholder="Enter your dietary restrictions">
+
+            <button type="button" class="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            var form = document.getElementById('allergies-form');
+            var allergies = form.elements['allergies'].value;
+            var dietaryRestrictions = form.elements['dietary-restrictions'].value;
+
+            localStorage.setItem('allergies', allergies);
+            localStorage.setItem('dietaryRestrictions', dietaryRestrictions);
+
+            window.location.href = 'profile.html';
+        }
+    </script>
+</body>
+</html>

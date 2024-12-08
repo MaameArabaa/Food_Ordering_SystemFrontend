@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Kitchen</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('/pictures/download.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        .nav li {
+            margin: 0 15px;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .signup-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+        }
+        .signup-button:hover {
+            background: #218838;
+        }
+        .banner {
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .banner h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .banner .button {
+            background: #28a745;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.5em;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .banner .button:hover {
+            background: #218838;
+        }
+        .featured {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .featured h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .featured .items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .featured .item {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .featured .item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .footer p, .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer .social a {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Mes Kitchen</h1>
+        <ul class="nav">
+            <li><a href="signup.html">Menu</a></li>
+            <li><a href="main.html">Loyalty</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <a href="signup.html" class="signup-button">Signup</a>
+    </div>
+    
+    <div class="banner">
+        <h2>Welcome to Mes Kitchen</h2>
+        <a href="login.html" class="button">Order Now</a>
+    </div>
+
+    <div class="featured">
+        <h2>Our Specials</h2>
+        <div class="items">
+            <div class="item">
+                <img src="pictures/attieke.jpg" alt="meal 1">
+                <h3>Attieke</h3>
+                
+            </div>
+            <div class="item">
+                <img src="pictures/banku.jpg" alt="meal 3">
+                <h3>Banku and Tilapia</h3>
+            </div>
+            <div class="item">
+                <img src="pictures/pizza.jpg" alt="meal 3">
+                <h3>Pizza</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Contact Us: (233) 256-722-088 | meskitchen@gmail.com</p>
+    </div>
+</body>
+</html>

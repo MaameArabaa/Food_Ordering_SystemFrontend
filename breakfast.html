@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Kitchen</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ff7043;
+            padding: 10px;
+            position: relative;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        .navbar a:hover {
+            background-color: #ff5722;
+        }
+        .cart-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff7043;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .cart-button:hover {
+            background-color: #ff5722;
+        }
+        .banner {
+            text-align: center;
+            padding: 100px 20px;
+            background-image: url('/pictures/download.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .banner h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .banner p {
+            font-size: 1.2em;
+        }
+        .menu-container {
+            padding: 20px;
+        }
+        .menu-tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .menu-tabs a {
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .menu-tabs a:hover {
+            background-color: #ff5722;
+        }
+        .menu-item {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+        }
+        .menu-item div {
+            flex: 1;
+            margin-left: 10px;
+        }
+        .menu-item button {
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .menu-item button:hover {
+            background-color: #ff5722;
+        }
+        .nutrition-facts {
+            display: none;
+            position: absolute;
+            top: 110%;
+            left: 0;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            z-index: 1;
+        }
+        .menu-item:hover .nutrition-facts {
+            display: block;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="lunch.html">Lunch</a>
+        <a href="supper.html">Supper</a>
+        <a href="drinks.html">Drinks</a>
+        <a href="sides.html">Sides</a>
+        <a href="cart.html" class="cart-button">Cart</a>
+    </div>
+
+    <div class="banner">
+        <h1>Welcome to Mes Kitchen</h1>
+        <p>Experience the best food with quality ingredients and affordable prices!</p>
+    </div>
+
+    <div class="menu-container">
+        <div class="menu">
+            <div id="breakfast" class="menu-section">
+                <h2>Breakfast</h2>
+                <h3>Available Mon - Fri 8:00-11:00</h3>
+                <h3>And Sat - Sun 9:00-11:00</h3>
+                <div class="menu-item">
+                    <img src="pictures/waffles.jpg" alt="waffles">
+                    <div>
+                        <h3>Chocolate waffles</h3>
+                        <p>GH₵30.00</p>
+                        <div class="nutrition-facts">
+                            <p><strong>Calories:</strong> 350</p>
+                            <p><strong>Fat:</strong> 15g</p>
+                            <p><strong>Carbs:</strong> 45g</p>
+                            <p><strong>Protein:</strong> 8g</p>
+                        </div>
+                    </div>
+                    <button onclick="addToCart('Chocolate waffles', 30)">Order now</button>
+                </div>
+                <div class="menu-item">
+                    <img src="pictures/pancake.jpg" alt="pancakes">
+                    <div>
+                        <h3>Pancakes</h3>
+                        <p>GH₵30.00</p>
+                        <div class="nutrition-facts">
+                            <p><strong>Calories:</strong> 300</p>
+                            <p><strong>Fat:</strong> 10g</p>
+                            <p><strong>Carbs:</strong> 40g</p>
+                            <p><strong>Protein:</strong> 6g</p>
+                        </div>
+                    </div>
+                    <button onclick="addToCart('Pancakes', 30)">Order now</button>
+                </div>
+                <div class="menu-item">
+                    <img src="pictures/kooko.jpg" alt="kooko">
+                    <div>
+                        <h3>Kooko and koose</h3>
+                        <p>GH₵15.00</p>
+                        <div class="nutrition-facts">
+                            <p><strong>Calories:</strong> 200</p>
+                            <p><strong>Fat:</strong> 5g</p>
+                            <p><strong>Carbs:</strong> 30g</p>
+                            <p><strong>Protein:</strong> 4g</p>
+                        </div>
+                    </div>
+                    <button onclick="addToCart('Kooko and koose', 15)">Order now</button>
+                </div>
+                <div class="menu-item">
+                    <img src="pictures/milo.jpg" alt="milo">
+                    <div>
+                        <h3>Milo</h3>
+                        <p>GH₵10.00</p>
+                        <div class="nutrition-facts">
+                            <p><strong>Calories:</strong> 150</p>
+                            <p><strong>Fat:</strong> 3g</p>
+                            <p><strong>Carbs:</strong> 25g</p>
+                            <p><strong>Protein:</strong> 3g</p>
+                        </div>
+                    </div>
+                    <button onclick="addToCart('Milo', 10)">Order now</button>
+                </div>
+                <div class="menu-item">
+                    <img src="pictures/tea.jpg" alt="tea">
+                    <div>
+                        <h3>Tea</h3>
+                        <p>GH₵10.00</p>
+                        <div class="nutrition-facts">
+                            <p><strong>Calories:</strong> 50</p>
+                            <p><strong>Fat:</strong> 2g</p>
+                            <p><strong>Carbs:</strong> 10g</p>
+                            <p><strong>Protein:</strong> 1g</p>
+                        </div>
+                    </div>
+                    <button onclick="addToCart('Tea', 10)">Order now</button>
+                </div>
+                <div class="menu-item">
+                    <img src="pictures/yoghurt.jpg" alt="Yoghurt">
+                    <div>
+                        <h3>Greek Yoghurt with Honey</h3>
+                        <p>GH₵25.00</p>
+                        <div class="nutrition-facts">
+                            <p><strong>Calories:</strong> 180</p>
+                            <p><strong>Fat:</strong> 7g</p>
+                            <p><strong>Carbs:</strong> 20g</p>
+                            <p><strong>Protein:</strong> 10g</p>
+                        </div>
+                    </div>
+                    <button onclick="addToCart('Greek Yoghurt with Honey', 25)">Order now</button>
+                </div>
+                    
+    <div class="footer">
+        <p>&copy; 2024 Mes Kitchen. All rights reserved.</p>
+    </div>
+
+    <script>
+        function addToCart(itemName, itemPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: itemName, price: itemPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(itemName + " has been added to your cart.");
+        }
+    </script>
+</body>
+</html>

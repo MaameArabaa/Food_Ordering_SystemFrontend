@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loyalty Program</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('/pictures/download.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #ff7043;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #ff5722;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            width: 85%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .loyalty-tier {
+            background: #fff;
+            color: #333;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        .loyalty-tier h2 {
+            font-size: 1.3em;
+            margin-bottom: 8px;
+        }
+        .loyalty-tier p {
+            margin: 3px 0;
+            font-size: 1em;
+        }
+        .loyalty-tier .amount {
+            color: #28a745;
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="welcome.html" class="back-button">Back</a>
+    <div class="container">
+        <h1>Mes Kitchen Loyalty Program</h1>
+        <div class="loyalty-tier">
+            <h2>Bronze Tier</h2>
+            <p>Spend <span class="amount">GH₵300</span> to achieve this tier</p>
+            <p>Benefits:</p>
+            <ul>
+                <li>5% off on all orders</li>
+            </ul>
+        </div>
+        <div class="loyalty-tier">
+            <h2>Silver Tier</h2>
+            <p>Spend <span class="amount">GH₵500</span> to achieve this tier</p>
+            <p>Benefits:</p>
+            <ul>
+                <li>10% off on all orders</li>
+                <li>Free drink with every meal</li>
+            </ul>
+        </div>
+        <div class="loyalty-tier">
+            <h2>Gold Tier</h2>
+            <p>Spend <span class="amount">GH₵1000</span> to achieve this tier</p>
+            <p>Benefits:</p>
+            <ul>
+                <li>15% off on all orders</li>
+                <li>Free dessert with every meal</li>
+                <li>Free delivery anywhere on campus</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

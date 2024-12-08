@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Mes Kitchen</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('/pictures/download.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid #fff;
+        }
+        .info {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .info label {
+            font-weight: bold;
+            color: #ddd;
+        }
+        .info p {
+            margin: 5px 0;
+        }
+        .button {
+            background: #ff7043;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .button:hover {
+            background: #ff5722;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Profile</h1>
+        <img src="/pictures/profile.png" alt="Profile Picture" class="profile-pic">
+        <div class="info">
+            <label>Full Name:</label>
+            <p id="fullName">Maame Araba </p>
+        </div>
+        <div class="info">
+            <label>Role:</label>
+            <p id="role">Staff</p>
+        </div>
+        <div class="info">
+            <label>Loyalty Tier:</label>
+            <p id="loyaltyTier">Gold</p>
+        </div>
+        <div class="info">
+            <label>Allergies:</label>
+            <p id="allergies"></p>
+        </div>
+        <div class="info">
+            <label>Dietary Restrictions:</label>
+            <p id="dietaryRestrictions"></p>
+        </div>
+        <a href="menu.html" class="button">Go to Menu</a>
+    </div>
+
+    <script>
+        document.getElementById('allergies').innerText = localStorage.getItem('allergies');
+        document.getElementById('dietaryRestrictions').innerText = localStorage.getItem('dietaryRestrictions');
+    </script>
+</body>
+</html>
