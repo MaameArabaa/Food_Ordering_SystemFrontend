@@ -94,8 +94,12 @@
         <h1>Your Cart</h1>
         <div id="cart-items"></div>
         <div class="total">
-            <p>Total</p>
-            <p id="total-price">GH₵0.00</p>
+            <p>Original Total</p>
+            <p id="original-total-price">GH₵0.00</p>
+        </div>
+        <div class="total">
+            <p>Discounted Total (15% off)</p>
+            <p id="discounted-total-price">GH₵0.00</p>
         </div>
         <a href="confirm.html" class="checkout-button" onclick="transferCart()">Checkout</a>
     </div>
@@ -104,7 +108,8 @@
         function displayCart() {
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             let cartItemsContainer = document.getElementById('cart-items');
-            let totalPrice = 0;
+            let originalTotalPrice = 0;
+            let discountedTotalPrice = 0;
 
             cart.forEach((item, index) => {
                 let cartItem = document.createElement('div');
@@ -113,16 +118,19 @@
                 cartItem.innerHTML = `
                     <div>
                         <h3>${item.name}</h3>
-                        <p class="price">GH₵${item.price}</p>
+                        <p class="price">GH₵${item.price.toFixed(2)}</p>
                     </div>
                     <button class="delete-button" onclick="removeFromCart(${index})">Delete</button>
                 `;
 
                 cartItemsContainer.appendChild(cartItem);
-                totalPrice += item.price;
+                originalTotalPrice += item.price;
             });
 
-            document.getElementById('total-price').innerText = `GH₵${totalPrice.toFixed(2)}`;
+            discountedTotalPrice = originalTotalPrice * 0.85;
+
+            document.getElementById('original-total-price').innerText = `GH₵${originalTotalPrice.toFixed(2)}`;
+            document.getElementById('discounted-total-price').innerText = `GH₵${discountedTotalPrice.toFixed(2)}`;
         }
 
         function removeFromCart(index) {
